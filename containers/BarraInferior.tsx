@@ -3,7 +3,9 @@ import EnvironmentOutlined from "@ant-design/icons/EnvironmentOutlined";
 import CompassOutlined from "@ant-design/icons/CompassOutlined";
 import PhoneOutlined from "@ant-design/icons/PhoneOutlined";
 import FacebookOutlined from "@ant-design/icons/FacebookOutlined";
-import Logo from "../imgs/LogoBranco.png";
+import { Link } from "react-scroll";
+
+const Logo = require("../imgs/LogoBranco.png");
 
 const BarraInferiorWrapper = styled.div`
   .border-right-white {
@@ -12,32 +14,40 @@ const BarraInferiorWrapper = styled.div`
 `;
 
 const BarraInferior: React.FC = () => (
-  <BarraInferiorWrapper className="flex mt-12 justify-center items-center p-8">
-    <div className="p-4 flex-grow">
+  <BarraInferiorWrapper className="flex flex-wrap mt-12 justify-center items-center p-8">
+    <div className="p-4 flex-1">
       <img className="w-3/5" src={Logo} />
     </div>
-    <div className="flex flex-grow">
+    <div className="flex flex-1">
       <div className="p-4 border-right-white">Menu</div>
       <div className="flex">
         <div>
           <div className="p-4 text-sm">
-            <a href="#aempresa">A Empresa</a>
+            <Link to="aempresa" spy={true} smooth={true} duration={500}>
+              A Empresa
+            </Link>
           </div>
           <div className="p-4 text-sm">
-            <a href="#trajes">Trajes</a>
+            <Link to="trajes" spy={true} smooth={true} duration={500}>
+              Trajes
+            </Link>
           </div>
         </div>
         <div>
           <div className="p-4 text-sm">
-            <a href="#alugueis">Alugueis</a>
+            <Link to="alugueis" spy={true} smooth={true} duration={500}>
+              Alugueis
+            </Link>
           </div>
           <div className="p-4 text-sm">
-            <a href="#contato">Contato</a>
+            <Link to="contato" spy={true} smooth={true} duration={500}>
+              Contato
+            </Link>
           </div>
         </div>
       </div>
     </div>
-    <div className="flex flex-grow">
+    <div className="flex flex-1">
       <div className="p-4 border-right-white">Contato</div>
       <div className="p-4">
         <div className="flex my-2 text-sm">
@@ -54,7 +64,9 @@ const BarraInferior: React.FC = () => (
         </div>
         <div className="flex my-2 text-sm">
           <FacebookOutlined className="mr-4" />
-          <p>Lorem ipsum dolor sit amet</p>
+          <a href="https://www.facebook.com/marcus.vinicius.trajes">
+            Marcus Vinícius
+          </a>
         </div>
       </div>
     </div>

@@ -1,4 +1,6 @@
 import * as React from "react";
+import 'antd/dist/antd.css';
+
 import Layout from "../components/Layout";
 import Index from "../containers/Index";
 import AEmpresa from "../containers/AEmpresa";

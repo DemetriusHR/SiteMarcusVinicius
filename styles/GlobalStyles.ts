@@ -25,6 +25,15 @@ const GlobalStyle = createGlobalStyle`
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
     font-family: 'Cinzel', serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6, p {
+    color: var(--textcolor);
+  }
+
+  a {
+    color: var(--textcolor);
   }
 `;
 

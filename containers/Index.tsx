@@ -1,7 +1,9 @@
 import DownOutlined from "@ant-design/icons/DownOutlined";
 import styled, { StyledComponent } from "styled-components";
-import Img from "../imgs/image.jpg";
+import { Link } from "react-scroll";
 import WrapperContainer from "../components/WrapperContainer";
+
+const Img = require("../imgs/image.jpg");
 
 const IndexStyle: StyledComponent<"div", any, {}, never> = styled.div`
   background-image: url(${Img});
@@ -9,13 +11,22 @@ const IndexStyle: StyledComponent<"div", any, {}, never> = styled.div`
 
 const Index: React.FC = () => (
   <WrapperContainer>
-    <IndexStyle className="w-full max-h-screen min-h-screen bg-no-repeat bg-cover bg-opacity-25 flex flex-col-reverse">
-      <div className="text-center">
-        <h1 className="text-6xl font-decorative">Marcus Vinicius</h1>
+    <IndexStyle id="index" className="max-h-screen min-h-screen bg-no-repeat bg-cover bg-opacity-25 flex flex-col-reverse">
+      <div className="text-center py-2">
+        <h1 className="text-6xl font-decorative">Marcus Vinícius</h1>
         <h2 className="text-3xl">Alugueis de Trajes</h2>
-        <i>
-          <DownOutlined />
-        </i>
+        <Link
+          activeClass="active"
+          to="aempresa"
+          className="cursor-pointer"
+          spy={true}
+          smooth={true}
+          duration={500}
+        >
+          <i>
+            <DownOutlined />
+          </i>
+        </Link>
       </div>
     </IndexStyle>
   </WrapperContainer>
