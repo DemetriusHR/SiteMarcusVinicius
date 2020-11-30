@@ -4,8 +4,40 @@ import styled from "styled-components";
 import WrapperContainer from "../components/WrapperContainer";
 import Navbar from "../components/Navbar";
 
-const Square = styled.div`
-  background-color: #eee;
+const imgTerno = require("../imgs/terno.jpg");
+const imgSmoking = require("../imgs/smoking.jpg");
+const imgFraque = require("../imgs/fraque.jpg");
+
+const Terno = styled.div`
+  background: url(${imgTerno});
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (max-width: 670px) {
+    width: 100%;
+  }
+`;
+
+const Smoking = styled.div`
+  background: url(${imgSmoking});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media (max-width: 670px) {
+    width: 100%;
+  }
+`;
+
+const Fraque = styled.div`
+  background: url(${imgFraque});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media (max-width: 670px) {
+    width: 100%;
+  }
 `;
 
 const Trajes: React.FC = () => (
@@ -18,10 +50,10 @@ const Trajes: React.FC = () => (
         estilizados. Todas as peças podem ser ajustadas para que o caimento seja
         sempre impecável, até mesmo poucas semanas antes do evento.
       </p>
-      <Carousel autoplay>
+      <Carousel dotPosition="top" autoplay>
         <div>
           <div className="flex items-center justify-center">
-            <Square className="mx-6 w-1/2 h-64" />
+            <Terno className="mx-6 w-1/2 h-64" />
           </div>
           <h2 className="text-center my-6 text-xl">Terno</h2>
           <p>
@@ -34,7 +66,7 @@ const Trajes: React.FC = () => (
         </div>
         <div>
           <div className="flex items-center justify-center">
-            <Square className="mx-6 w-1/2 h-64" />
+            <Smoking className="mx-6 w-1/2 h-64" />
           </div>
           <h2 className="text-center my-6 text-xl">Smoking</h2>
           <p>
@@ -44,7 +76,7 @@ const Trajes: React.FC = () => (
         </div>
         <div>
           <div className="flex items-center justify-center">
-            <Square className="mx-6 w-1/2 h-64" />
+            <Fraque className="mx-6 w-1/2 h-64" />
           </div>
           <h2 className="text-center my-6 text-xl">Fraque</h2>
           <p>

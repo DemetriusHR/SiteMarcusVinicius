@@ -19,6 +19,10 @@ const LayoutWrapper: StyledComponent<"div", any, {}, never> = styled.div`
   .text-color-2 {
     color: var(--textcolor1);
   }
+  
+  .map-wrapper {
+    width: calc(100% - 4rem);
+  }
 `;
 
 const Layout: React.FC = ({ children }) => (

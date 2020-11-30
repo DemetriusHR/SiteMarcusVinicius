@@ -4,8 +4,21 @@ import { Link } from "react-scroll";
 import WrapperContainer from "../components/WrapperContainer";
 import Navbar from "../components/Navbar";
 
-const Square = styled.div`
-  background-color: #eee;
+const imgAluguel = require("../imgs/aluguel.jpg");
+const imgVenda = require("../imgs/venda.jpg");
+
+const Aluguel = styled.div`
+  background: url(${imgAluguel});
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+`;
+
+const Venda = styled.div`
+  background: url(${imgVenda});
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
 `;
 
 const Alugueis: React.FC = () => (
@@ -15,9 +28,9 @@ const Alugueis: React.FC = () => (
       <div className="flex flex-wrap mt-12">
         <div className="mr-4">
           <div className="flex justify-center">
-            <Square className="w-1/2 h-64" />
+            <Aluguel className="w-full h-64" />
           </div>
-          <h2 className="my-8 text-center">Aluguel</h2>
+          <h2 className="my-8 text-center text-lg">Aluguel</h2>
           <p className="text-sm text-center">
             Você pode escolher qualquer traje disponível na loja para usar-lo,
             mas durante um tempo. Ótima escolha para clientes que não usam com
@@ -36,9 +49,9 @@ const Alugueis: React.FC = () => (
         </div>
         <div className="ml-4">
           <div className="flex justify-center">
-            <Square className="w-1/2 h-64" />
+            <Venda className="w-full h-64" />
           </div>
-          <h2 className="my-8 text-center">Venda</h2>
+          <h2 className="my-8 text-center text-lg">Venda</h2>
           <p className="text-sm">
             Você pode escolher qualquer traje disponível na loja para
             comprar-lo. Ótima escolha para clientes que usam com frequência e

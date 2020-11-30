@@ -1,4 +1,10 @@
-import { GoogleApiWrapper, Map, IMapProps, Marker, IMarkerProps } from "google-maps-react";
+import {
+  GoogleApiWrapper,
+  Map,
+  IMapProps,
+  Marker,
+  IMarkerProps,
+} from "google-maps-react";
 import EnvironmentOutlined from "@ant-design/icons/EnvironmentOutlined";
 import CompassOutlined from "@ant-design/icons/CompassOutlined";
 import PhoneOutlined from "@ant-design/icons/PhoneOutlined";
@@ -16,7 +22,7 @@ interface IMap extends IMapProps {
   zoom: number;
 }
 
-const MapComponent: React.FC<IMap> = ({ ...props }) => (<Map {...props} />);
+const MapComponent: React.FC<IMap> = ({ ...props }) => <Map {...props} />;
 
 interface IMarker extends IMarkerProps {
   name: string;
@@ -27,7 +33,9 @@ interface IMarker extends IMarkerProps {
   };
 }
 
-const MarkerComponent: React.FC<IMarker> = ({ ...props }) => (<Marker {...props} />);
+const MarkerComponent: React.FC<IMarker> = ({ ...props }) => (
+  <Marker {...props} />
+);
 
 const Contato: React.FC<IContato> = ({ loaded, google }) => (
   <WrapperContainer>
@@ -39,28 +47,30 @@ const Contato: React.FC<IContato> = ({ loaded, google }) => (
             {!loaded ? (
               <div>Loading...</div>
             ) : (
-              <MapComponent
-                google={google}
-                style={{
-                  position: "relative",
-                  width: "25rem",
-                  height: "15rem",
-                }}
-                initialCenter={{
-                  lat: -21.93435629906899,
-                  lng: -50.52137117542768,
-                }}
-                zoom={14}
-              >
-                <MarkerComponent
-                  name="Marcus Vinícius"
-                  position={{
+              <div className="map-config">
+                <MapComponent
+                  google={google}
+                  style={{
+                    position: "relative",
+                    width: "19rem",
+                    height: "15rem",
+                  }}
+                  initialCenter={{
                     lat: -21.93435629906899,
                     lng: -50.52137117542768,
                   }}
-                  title="Marcus Vinícius"
-                />
-              </MapComponent>
+                  zoom={14}
+                >
+                  <MarkerComponent
+                    name="Marcus Vinícius"
+                    position={{
+                      lat: -21.93435629906899,
+                      lng: -50.52137117542768,
+                    }}
+                    title="Marcus Vinícius"
+                  />
+                </MapComponent>
+              </div>
             )}
           </div>
           <h2 className="my-4 text-xl text-center">Encontre-nos por aqui</h2>

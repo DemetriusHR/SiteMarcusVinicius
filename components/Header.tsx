@@ -8,6 +8,7 @@ const Logo = require("../imgs/logo.png");
 
 const HeaderWrappper = styled.header`
   background-color: var(--background);
+  z-index: 9999;
 `;
 
 interface IBurgerWrapper {
@@ -26,7 +27,7 @@ const BurgerWrapper = styled.button<IBurgerWrapper>`
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 10;
+  z-index: 10000;
 
   span {
     width: 2rem;
@@ -76,7 +77,7 @@ export const MenuWrapper = styled.nav<IBurgerWrapper>`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: #484848;
+  background: var(--background);
   transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
   height: 100vh;
   text-align: left;
@@ -115,7 +116,7 @@ export const MenuWrapper = styled.nav<IBurgerWrapper>`
 `;
 
 const Menu: React.FC<IBurgerWrapper> = ({ open, ...props }) => (
-  <MenuWrapper open={open} aria-hidden={!open} id="main-menu" {...props}>
+  <MenuWrapper open={open} className="shadow-md" aria-hidden={!open} id="main-menu" {...props}>
     <Link
       activeClass="active"
       to="aempresa"
