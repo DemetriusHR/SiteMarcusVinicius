@@ -8,7 +8,10 @@ import {
 import EnvironmentOutlined from "@ant-design/icons/EnvironmentOutlined";
 import CompassOutlined from "@ant-design/icons/CompassOutlined";
 import PhoneOutlined from "@ant-design/icons/PhoneOutlined";
+import MobileOutlined from "@ant-design/icons/MobileOutlined";
 import FacebookOutlined from "@ant-design/icons/FacebookOutlined";
+import InstagramOutlined from "@ant-design/icons/InstagramOutlined";
+import MailOutlined from "@ant-design/icons/MailOutlined";
 
 import WrapperContainer from "../components/WrapperContainer";
 import Navbar from "../components/Navbar";
@@ -84,11 +87,27 @@ const Contato: React.FC<IContato> = ({ loaded, google }) => (
           </div>
           <div className="flex my-2">
             <PhoneOutlined className="mr-4 text-lg" />
-            <p>+55 14 3441-7192</p>
+            <a data-phone="+55 14 3441-7192">+55 14 3441-7192</a>
           </div>
-          <div className="flex my-2">
+          <div className="flex my-4">
+            <MobileOutlined className="mr-4 text-lg" />
+            <a href="https://api.whatsapp.com/send?phone=5514996082389">+55 14 99608-2389</a>
+          </div>
+          <div className="flex my-4">
             <FacebookOutlined className="mr-4 text-lg" />
             <a href="https://www.facebook.com/marcus.vinicius.trajes">
+              Marcus Vinícius
+            </a>
+          </div>
+          <div className="flex my-4">
+            <InstagramOutlined className="mr-4 text-lg" />
+            <a href="https://www.instagram.com/lojamarcusviniciustrajes/">
+              Marcus Vinícius
+            </a>
+          </div>
+          <div className="flex my-4">
+            <MailOutlined className="mr-4 text-lg" />
+            <a href="mailto:marcusviniciustrajes@gmail.com">
               Marcus Vinícius
             </a>
           </div>

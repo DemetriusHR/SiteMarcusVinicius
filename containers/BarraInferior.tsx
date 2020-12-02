@@ -2,7 +2,10 @@ import styled from "styled-components";
 import EnvironmentOutlined from "@ant-design/icons/EnvironmentOutlined";
 import CompassOutlined from "@ant-design/icons/CompassOutlined";
 import PhoneOutlined from "@ant-design/icons/PhoneOutlined";
+import MobileOutlined from "@ant-design/icons/MobileOutlined";
 import FacebookOutlined from "@ant-design/icons/FacebookOutlined";
+import InstagramOutlined from "@ant-design/icons/InstagramOutlined";
+import MailOutlined from "@ant-design/icons/MailOutlined";
 import { Link } from "react-scroll";
 
 const Logo = require("../imgs/LogoBranco.png");
@@ -78,11 +81,27 @@ const BarraInferior: React.FC = () => (
           </div>
           <div className="flex my-2 text-sm">
             <PhoneOutlined className="mr-4" />
-            <p>+55 14 3441-7192</p>
+            <a data-phone="+55 14 3441-7192">+55 14 3441-7192</a>
           </div>
-          <div className="flex my-2 text-sm">
+          <div className="flex my-4 text-sm">
+            <MobileOutlined className="mr-4" />
+            <a href="https://api.whatsapp.com/send?phone=5514996082389">+55 14 99608-2389</a>
+          </div>
+          <div className="flex my-4 text-sm">
             <FacebookOutlined className="mr-4" />
             <a href="https://www.facebook.com/marcus.vinicius.trajes">
+              Marcus Vinícius
+            </a>
+          </div>
+          <div className="flex my-4 text-sm">
+            <InstagramOutlined className="mr-4" />
+            <a href="https://www.instagram.com/lojamarcusviniciustrajes/">
+              Marcus Vinícius
+            </a>
+          </div>
+          <div className="flex my-4 text-sm">
+            <MailOutlined className="mr-4" />
+            <a href="https://www.instagram.com/lojamarcusviniciustrajes/">
               Marcus Vinícius
             </a>
           </div>
