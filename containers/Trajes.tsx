@@ -1,5 +1,5 @@
-import Carousel from "antd/lib/carousel";
 import styled from "styled-components";
+import Slider from "react-slick";
 
 import WrapperContainer from "../components/WrapperContainer";
 import Navbar from "../components/Navbar";
@@ -7,6 +7,7 @@ import Navbar from "../components/Navbar";
 const imgTerno = require("../imgs/terno.jpg");
 const imgSmoking = require("../imgs/smoking.jpg");
 const imgFraque = require("../imgs/fraque.jpg");
+const imgMeioFraque = require("../imgs/meio-fraque.jpg");
 
 const Terno = styled.div`
   background: url(${imgTerno});
@@ -40,6 +41,26 @@ const Fraque = styled.div`
   }
 `;
 
+const MeioFraque = styled.div`
+  background: url(${imgMeioFraque});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media (max-width: 670px) {
+    width: 100%;
+  }
+`;
+
+const settings = {
+  dots: true,
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 4000,
+};
+
 const Trajes: React.FC = () => (
   <WrapperContainer>
     <div id="trajes" className="pt-24 px-8">
@@ -50,10 +71,10 @@ const Trajes: React.FC = () => (
         estilizados. Todas as peças podem ser ajustadas para que o caimento seja
         sempre impecável, até mesmo poucas semanas antes do evento.
       </p>
-      <Carousel dotPosition="top" autoplay>
+      <Slider {...settings}>
         <div>
           <div className="flex items-center justify-center">
-            <Terno className="mx-6 w-1/2 h-64" />
+            <Terno className="mx-6 w-1/2 h-96" />
           </div>
           <h2 className="text-center my-6 text-xl">Terno</h2>
           <p>
@@ -66,7 +87,7 @@ const Trajes: React.FC = () => (
         </div>
         <div>
           <div className="flex items-center justify-center">
-            <Smoking className="mx-6 w-1/2 h-64" />
+            <Smoking className="mx-6 w-1/2 h-96" />
           </div>
           <h2 className="text-center my-6 text-xl">Smoking</h2>
           <p>
@@ -76,7 +97,7 @@ const Trajes: React.FC = () => (
         </div>
         <div>
           <div className="flex items-center justify-center">
-            <Fraque className="mx-6 w-1/2 h-64" />
+            <Fraque className="mx-6 w-1/2 h-96" />
           </div>
           <h2 className="text-center my-6 text-xl">Fraque</h2>
           <p>
@@ -86,7 +107,18 @@ const Trajes: React.FC = () => (
             nocturnos formais e sofisticados).
           </p>
         </div>
-      </Carousel>
+        <div>
+          <div className="flex items-center justify-center">
+            <MeioFraque className="mx-6 w-1/2 h-96" />
+          </div>
+          <h2 className="text-center my-6 text-xl">Meio-Fraque</h2>
+          <p>
+            É o traje que tem a parte de trás do casaco mais longa, a tal “cauda
+            de pinguim”. Ele é composto por um paletó cinza escuro, uma camisa
+            branca, uma calça risca-de-giz e uma gravata.
+          </p>
+        </div>
+      </Slider>
     </div>
   </WrapperContainer>
 );

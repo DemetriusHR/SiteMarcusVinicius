@@ -1,5 +1,6 @@
 import * as React from "react";
-import 'antd/dist/antd.css';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 import Layout from "../components/Layout";
 import Index from "../containers/Index";

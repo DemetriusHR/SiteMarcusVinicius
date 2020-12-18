@@ -23,7 +23,7 @@ const Index: React.FC = () => (
           smooth={true}
           duration={500}
         >
-          <i>
+          <i className="text-2xl">
             <DownOutlined />
           </i>
         </Link>

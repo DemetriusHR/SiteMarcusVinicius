@@ -31,8 +31,8 @@ const BurgerWrapper = styled.button<IBurgerWrapper>`
 
   span {
     width: 2rem;
-    height: 0.25rem;
-    background: ${({ open }) => (open ? "#0D0C1D" : "#EFFFFA")};
+    height: 0.15rem;
+    background: #fff;
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
@@ -171,7 +171,7 @@ const Header: React.FC = () => {
   useOnClickOutside(node, () => setOpen(false));
 
   return (
-    <HeaderWrappper className="flex justify-between px-4 py-1 space-x-4 fixed min-w-full top-0">
+    <HeaderWrappper className="flex justify-between px-4 py-1 space-x-4 fixed min-w-full top-0 shadow-md">
       <nav className="w-10">
         <Link
           to="index"

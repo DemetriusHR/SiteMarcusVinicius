@@ -1,31 +1,24 @@
-import styled from "styled-components";
+import Image from "next/image";
+
 import WrapperContainer from "../components/WrapperContainer";
 import Navbar from "../components/Navbar";
-
-const ImgAntes = require("../imgs/loja_antes.png");
-const ImgHoje = require("../imgs/loja_hoje.png");
-
-const SquareAntes = styled.div`
-  background: url(${ImgAntes});
-  background-position: center;
-  width: 150%;
-`;
-
-const SquareHoje = styled.div`
-  background: url(${ImgHoje});
-  background-repeat: none;
-  background-position: center;
-  width: 150%;
-`;
 
 const AEmpresa: React.FC = () => (
   <WrapperContainer>
     <div id="aempresa" className="pt-24 px-8">
       <Navbar name="A Empresa" />
-      <div className="flex flex-wrap pt-8">
-        <SquareAntes className="flex-auto mr-8" />
-        <div className="flex-auto">
-          <h3 className="text-lg">História</h3>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-8">
+        <div className="flex items-center">
+          <Image
+            src="/imgs/loja_antes.png"
+            alt="Foto de como era a Marcus Vinícius"
+            width={500}
+            height={400}
+            className="m-auto shadow-md"
+          />
+        </div>
+        <div className="col-span-2 flex flex-col items-center">
+          <h3 className="text-lg w-full mb-4">História</h3>
           <p className="text-sm">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
             sodales ligula orci, pulvinar tempor elit pretium fringilla. Aenean
@@ -44,9 +37,9 @@ const AEmpresa: React.FC = () => (
           </p>
         </div>
       </div>
-      <div className="flex flex-wrap pt-8">
-        <div className="flex-auto">
-          <h3 className="text-lg">Hoje em Dia</h3>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-16">
+        <div className="col-span-2 flex flex-col items-center">
+          <h3 className="text-lg w-full mb-4">Hoje em Dia</h3>
           <p className="text-sm">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
             sodales ligula orci, pulvinar tempor elit pretium fringilla. Aenean
@@ -64,7 +57,15 @@ const AEmpresa: React.FC = () => (
             laoreet et. Proin sit amet semper ipsum.
           </p>
         </div>
-        <SquareHoje className="flex-auto ml-8" />
+        <div className="flex items-center">
+          <Image
+            src="/imgs/loja_hoje.png"
+            alt="Foto de como está atualmente a Marcus Vinícius"
+            width={500}
+            height={400}
+            className="m-auto shadow-md"
+          />
+        </div>
       </div>
     </div>
   </WrapperContainer>
