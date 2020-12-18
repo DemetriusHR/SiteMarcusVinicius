@@ -13,6 +13,7 @@ const Terno = styled.div`
   background: url(${imgTerno});
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 
   @media (max-width: 670px) {
     width: 100%;

@@ -51,6 +51,18 @@ const BurgerWrapper = styled.button<IBurgerWrapper>`
       transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
     }
   }
+
+  :hover {
+    > span {
+      :first-child {
+        transform: ${({ open }) => (open ? "" : "translateY(3px)")};
+      }
+
+      :nth-child(3) {
+        transform: ${({ open }) => (open ? "" : "translateY(-3px)")};
+      }
+    }
+  }
 `;
 
 interface IBurgerMenu {
